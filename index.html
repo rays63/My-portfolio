@@ -14,17 +14,17 @@
 	</div>
 	<!-- navigation bar -->
 	<header>
-		<a href="#" class="brand">Raymond</a>
-		<div class="menu-btn"></div>
-		<div class="navigation">
-			<a href="#main">Home</a>
-			<a href="#about">About</a>
-			<a href="#skill">Skills</a>
-			<a href="#services">Services</a>
-			<a href="#work">Work</a>
-			<a href="#contact">Contact</a>
-		</div>
-	</header>
+      <a href="#" class="brand">Raymond</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <a href="#main">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </header>
 	<!-- Main -->
 	<section class="main" id="main">
 		<div class="content">
@@ -277,59 +277,59 @@
 		<p>Copyright @2021 <a href="#">Coded Ray</a>. All Right Reserved.</p>
 	</footer>
 
-	<script type="text/javascript">
-		// javascript for navigation bar effect on scroll
-		window.addEventListener("scroll", function(){
-			const header = document.querySelector("header");
-			header.classList.toggle('sticky', window.scrollY > 0);
-		});
-		//javascript for responsive navigation sidebar menu
-		const menuBtn = document.querySelector(".menu-btn");
-		const navigation = document.querySelector(".navigation");
-		const navigationItem = document.querySelector(".navigation a");
+	<script>
+        //javascript for navigation bar effects on scroll
+        window.addEventListener("scroll", function(){
+          const header = document.querySelector("header");
+          header.classList.toggle('sticky', window.scrollY > 0);
+        });
 
-		menuBtn.addEventListener("click", () => {
-			menuBtn.classList.toggle("active");
-			navigation.classList.toggle("active");
-		});
+        //javascript for responsive navigation sidebar menu
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+        const navigationItems = document.querySelectorAll(".navigation a")
 
-		navigationItem.forEach((navigationItem) => {
-			navigationItem.addEventListener("click", () => {
-				menuBtn.classList.remove("active");
-				navigation.classList.remove("active");
-			});
-		});
+        menuBtn.addEventListener("click",  () => {
+          menuBtn.classList.toggle("active");
+          navigation.classList.toggle("active");
+        });
 
-		//js for scroll to top button
-		const scrollBtn = document.querySelector(".scrollToTop-btn");
+        navigationItems.forEach((navigationItem) => {
+          navigationItem.addEventListener("click", () => {
+            menuBtn.classList.remove("active");
+            navigation.classList.remove("active");
+          });
+        });
 
-		window.addEventListener("scroll", function(){
-			scrollBtn.classList.toggle("active", window.scrollY > 500);
-		});
+        //javascript for scroll to top button
+        const scrollBtn = document.querySelector(".scrollToTop-btn");
 
-		//js for scrolling back to top on click scroll to top button
-		scrollBtn.addEventListener("click", () => {
-			document.body.scrollTop = 0;
-			document.documentElement.scrollTop = 0;
-		});
+        window.addEventListener("scroll", function(){
+          scrollBtn.classList.toggle("active", window.scrollY > 500);
+        });
 
-		//js fot reveal website element on scroll
-		window.addEventListener("scroll", reveal);
+        //javascript for scroll back to top on click scroll-to-top button
+        scrollBtn.addEventListener("click", () => {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        });
 
-		function reveal(){
-			var reveals = document.querySelectorAll(".reveal");
+        //javascript for reveal website elements on scroll
+        window.addEventListener("scroll", reveal);
 
-			for(var i = 0; i < reveals.lenght; i++){
-				var windowHeight = window.innerheight;
-				var revealTop = reveals[i].getBoundingClientRect().top;
-				var revealPoint = 50;
+        function reveal(){
+          var reveals = document.querySelectorAll(".reveal");
 
-				if(revealTop < windowHeight - revealPoints){
-					reveals[i].classList.add("active");
-				}
-			}
-		}
-	</script>
+          for(var i = 0; i < reveals.length; i++){
+            var windowHeight = window.innerHeight;
+            var revealTop = reveals[i].getBoundingClientRect().top;
+            var revealPoint = 50;
 
+            if(revealTop < windowHeight - revealPoint){
+              reveals[i].classList.add("active");
+            }
+          }
+        }
+    </script>
 </body>
 </html>
