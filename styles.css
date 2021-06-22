@@ -107,7 +107,7 @@ section{
 header{
   z-index: 999;
   position: fixed;
-  background: rgba(255, 255, 255, 0.1);
+  background: #000016;
   top: 0;
   left: 0;
   width: 100%;
@@ -300,27 +300,27 @@ body{
 }
 
 .skills .content .col-right .bar .html:before{
-  width: 90%;
+  width: 80%;
   background: #e45126;
 }
 
 .skills .content .col-right .bar .css:before{
-  width: 90%;
+  width: 65%;
   background: #0c73b8;
 }
 
 .skills .content .col-right .bar .javascript:before{
-  width: 80%;
+  width: 60%;
   background: #e3a324;
 }
 
-.skills .content .col-right .bar .python:before{
-  width: 65%;
+.skills .content .col-right .bar .Python:before{
+  width: 80%;
   background: #30dd6d;
 }
 
-.skills .content .col-right .bar .mysql:before{
-  width: 85%;
+.skills .content .col-right .bar .Mysql:before{
+  width: 75%;
   background: #6d7eb8;
 }
 
@@ -521,6 +521,10 @@ body{
 }
 
 .footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   background: #000016;
   color: #fff;
   text-align: center;
@@ -680,7 +684,7 @@ body{
   pointer-events: auto;
 }
 
-.reveal{
+/*.reveal{
   position: relative;
   transform: translateY(50px);
   opacity: 0;
@@ -690,4 +694,4 @@ body{
 .reveal.active{
   transform: translateY(0);
   opacity: 1;
-}
+}*/
